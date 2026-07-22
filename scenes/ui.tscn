@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bfbe1o8sguw0y"]
+
+[ext_resource type="FontFile" uid="uid://dsaididh84gbq" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="1_nt7q6"]
+[ext_resource type="Script" uid="uid://c7uod3uornhs0" path="res://scripts/ui.gd" id="1_x4jx1"]
+
+[node name="UI" type="Control" unique_id=1852606138]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 3
+anchor_right = 0.101
+anchor_bottom = 0.15400001
+offset_right = -0.352005
+offset_bottom = 0.20799255
+size_flags_horizontal = 0
+script = ExtResource("1_x4jx1")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=751806112]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="MarginContainer" unique_id=592418583]
+z_index = 1
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("1_nt7q6")
+text = "Score: 0"
