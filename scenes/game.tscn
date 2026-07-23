@@ -3,15 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://bfbe1o8sguw0y" path="res://scenes/ui.tscn" id="1_0tnpc"]
 [ext_resource type="Script" uid="uid://b1bjp7npiwhpw" path="res://scripts/game_manager.gd" id="1_gee14"]
 [ext_resource type="PackedScene" uid="uid://du2g430hqsqag" path="res://scenes/player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" path="res://assets/sprites/world_tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bb6nopo7kq3n" path="res://scenes/platform.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://d2ygifa0ts80c" path="res://assets/brackeys/sprites/world_tileset.png" id="4_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dmgfcf5iru7aa" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bphpenpq3y123" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://ck8u34mptpvk4" path="res://scenes/slime_enemy.tscn" id="6_p57ef"]
 [ext_resource type="FontFile" path="res://assets/fonts/PixelOperator8.ttf" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
-texture = ExtResource("2_yqjtg")
+texture = ExtResource("4_0tnpc")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
