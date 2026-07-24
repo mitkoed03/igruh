@@ -23,6 +23,9 @@ class_name DialogueManagerDE extends CanvasLayer
 ## A sound player for voice lines (if they exist).
 @onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
+## A portrait slot
+@onready var portrait: TextureRect = %Portrait
+
 ## Temporary game states
 var temporary_game_states: Array = []
 
@@ -135,6 +138,13 @@ func apply_dialogue_line() -> void:
 
 	character_label.visible = not dialogue_line.character.is_empty()
 	character_label.text = tr(dialogue_line.character, "dialogue")
+
+	var portrait_path:String = "res://assets/portraits/%s.png" % dialogue_line.character 
+	if ResourceLoader.exists(portrait_path):
+		portrait.texture = load(portrait_path)
+	else:
+		portrait.texture = load("res://assets/portraits/default.png") 
+	
 
 	dialogue_label.hide()
 	dialogue_label.dialogue_line = dialogue_line

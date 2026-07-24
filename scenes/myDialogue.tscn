@@ -134,12 +134,14 @@ mouse_filter = 1
 [node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer/PanelContainer" unique_id=1427336121]
 layout_mode = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=592739099]
+[node name="HBoxContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer" unique_id=272752389]
 layout_mode = 2
+alignment = 2
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer" unique_id=75970497]
 custom_minimum_size = Vector2(225, 0)
 layout_mode = 2
+size_flags_vertical = 3
 horizontal_scroll_mode = 0
 script = ExtResource("1_f76uj")
 
@@ -183,6 +185,37 @@ polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/Control" unique_id=838802106]
 libraries/ = SubResource("AnimationLibrary_f76uj")
 autoplay = &"progress"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Balloon" unique_id=736184062]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.67800003
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -89.05603
+offset_top = 60.000004
+offset_right = -93.0
+offset_bottom = 60.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.44440156, 0.23850857)
+
+[node name="PanelContainer" type="PanelContainer" parent="Balloon/MarginContainer2" unique_id=623871243]
+clip_children = 2
+layout_mode = 2
+mouse_filter = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="Balloon/MarginContainer2/PanelContainer" unique_id=8249955]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Portrait" type="TextureRect" parent="Balloon/MarginContainer2/PanelContainer/MarginContainer" unique_id=167073236]
+unique_name_in_owner = true
+layout_mode = 2
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" unique_id=334378089 node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
