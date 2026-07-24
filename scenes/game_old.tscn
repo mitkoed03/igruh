@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dmgfcf5iru7aa" path="res://scenes/coin.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bphpenpq3y123" path="res://scenes/killzone.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://ck8u34mptpvk4" path="res://scenes/slime_enemy.tscn" id="6_p57ef"]
+[ext_resource type="FontFile" uid="uid://ddp7r6xdx7mln" path="res://assets/brackeys/fonts/PixelOperator8.ttf" id="9_l1d08"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vk6xn"]
 texture = ExtResource("4_gee14")
@@ -268,10 +269,15 @@ autoplay = &"move"
 
 [node name="Label" type="Label" parent="Labels" unique_id=1757350612]
 z_index = 1
-offset_left = -291.0
-offset_top = -101.0
-offset_right = -21.0
-offset_bottom = -66.0
+anchors_preset = -1
+anchor_left = -0.25
+anchor_top = -0.16000001
+anchor_right = -0.128
+anchor_bottom = -0.119
+offset_top = 0.68000793
+offset_right = -0.5439911
+offset_bottom = 1.1119995
+theme_override_fonts/font = ExtResource("9_l1d08")
 theme_override_font_sizes/font_size = 8
 text = "Space/W/Up to jump.
 Directions/AD to move."

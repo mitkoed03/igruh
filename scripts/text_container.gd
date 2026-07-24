@@ -20,4 +20,4 @@ func on_started_typing() -> void:
 	history_label.text += previous_text
 	
 func on_finished_typing() -> void:
-	previous_text = "[color=#aaaaaa]" + character_label.text  + "[/color]" + '\n' + dialogue_label.text + "\n\n"
+	previous_text = "[color=#7e8083]" + character_label.text  + "[/color]" + '\n' + dialogue_label.text + "\n\n"

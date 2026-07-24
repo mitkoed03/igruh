@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://dvkdw8kt1ecjd" path="res://scripts/text_container.gd" id="1_gurby"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="1_n24m4"]
 [ext_resource type="Script" uid="uid://iam0084486bm" path="res://scripts/my_dialogue.gd" id="1_s1v0j"]
+[ext_resource type="FontFile" uid="uid://ddp7r6xdx7mln" path="res://assets/brackeys/fonts/PixelOperator8.ttf" id="2_s1v0j"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="2_xuva5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -29,6 +30,7 @@ corner_radius_top_left = 5
 corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
+corner_detail = 2
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
 bg_color = Color(0, 0, 0, 1)
@@ -54,7 +56,8 @@ corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
 [sub_resource type="Theme" id="Theme_gurby"]
-default_font_size = 20
+default_font = ExtResource("2_s1v0j")
+default_font_size = 16
 Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
 Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
 Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
@@ -148,6 +151,7 @@ script = ExtResource("1_f76uj")
 [node name="TextContainer" type="VBoxContainer" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer" unique_id=354136059]
 layout_mode = 2
 size_flags_horizontal = 3
+theme_override_constants/separation = 0
 script = ExtResource("1_gurby")
 
 [node name="HistoryLabel" type="RichTextLabel" parent="Balloon/MarginContainer/PanelContainer/MarginContainer/HBoxContainer/ScrollContainer/TextContainer" unique_id=1514252418]
@@ -194,9 +198,9 @@ anchor_left = 0.61
 anchor_top = 0.093
 anchor_right = 0.73200005
 anchor_bottom = 0.356
-offset_left = -29.720032
+offset_left = -40.72003
 offset_top = -15.264
-offset_right = 29.735962
+offset_right = 18.735962
 offset_bottom = 14.311996
 grow_horizontal = 2
 grow_vertical = 0
