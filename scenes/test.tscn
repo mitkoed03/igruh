@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://bm8b6jx6gh34o" path="res://assets/test_env.png" id="2_iyx0m"]
 [ext_resource type="PackedScene" uid="uid://bphpenpq3y123" path="res://scenes/killzone.tscn" id="3_74lek"]
 [ext_resource type="Texture2D" uid="uid://bbl6vhtm50scw" path="res://assets/cosmic_kill_zone.png" id="4_j5jx5"]
+[ext_resource type="PackedScene" uid="uid://bfbe1o8sguw0y" path="res://scenes/ui.tscn" id="5_lpvoh"]
+[ext_resource type="PackedScene" uid="uid://b63cnjeets33n" path="res://scenes/DeathScreen.tscn" id="6_at5dv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_74lek"]
 texture = ExtResource("2_iyx0m")
@@ -718,3 +720,9 @@ position = Vector2(-0.25, -0.5)
 sprite_frames = SubResource("SpriteFrames_rdxtn")
 animation = &"cosmic"
 autoplay = "cosmic"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1132142841]
+
+[node name="UI" parent="CanvasLayer" unique_id=1852606138 instance=ExtResource("5_lpvoh")]
+
+[node name="DeathScreen" parent="CanvasLayer" unique_id=528587816 instance=ExtResource("6_at5dv")]

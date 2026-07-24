@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bfbe1o8sguw0y" path="res://scenes/ui.tscn" id="1_0tnpc"]
 [ext_resource type="Script" uid="uid://b1bjp7npiwhpw" path="res://scripts/game_manager.gd" id="1_gee14"]
+[ext_resource type="PackedScene" uid="uid://b63cnjeets33n" path="res://scenes/DeathScreen.tscn" id="1_r26g3"]
 [ext_resource type="PackedScene" uid="uid://du2g430hqsqag" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Resource" uid="uid://dqdqt2mklc6jr" path="res://dialogue/test.dialogue" id="3_gopkw"]
 [ext_resource type="PackedScene" uid="uid://bb6nopo7kq3n" path="res://scenes/platform.tscn" id="3_lnu2h"]
@@ -188,6 +189,11 @@ _data = {
 [node name="Game" type="Node2D" unique_id=77327392]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1656118276]
+
+[node name="DeathScreen" parent="CanvasLayer" unique_id=528587816 instance=ExtResource("1_r26g3")]
+anchors_preset = -1
+offset_left = 2.0
+offset_top = 2.0
 
 [node name="UI" parent="CanvasLayer" unique_id=1852606138 instance=ExtResource("1_0tnpc")]
 

@@ -1,5 +1,72 @@
 [gd_scene format=3 uid="uid://b63cnjeets33n"]
 
+[ext_resource type="Script" uid="uid://blck77p30yr6w" path="res://scripts/death_screen.gd" id="1_biyii"]
+[ext_resource type="FontFile" uid="uid://dsaididh84gbq" path="res://assets/brackeys/fonts/PixelOperator8-Bold.ttf" id="2_5034k"]
+
+[sub_resource type="Animation" id="Animation_0r1s6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.5372549, 0.5372549, 0.5372549, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_rg777"]
+resource_name = "dead"
+length = 0.19999999999999998
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Label:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": ["", "Dead..."]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0015741121, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.5372549, 0.5372549, 0.5372549, 0), Color(0.5372549, 0.5372549, 0.5372549, 0.6392157)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sroce"]
+_data = {
+&"RESET": SubResource("Animation_0r1s6"),
+&"dead": SubResource("Animation_rg777")
+}
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_o4o8p"]
+light_mode = 1
+
 [node name="DeathScreen" type="Control" unique_id=528587816]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +74,33 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_biyii")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1419909284]
+libraries/ = SubResource("AnimationLibrary_sroce")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1954927914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 126.0
+offset_bottom = -129.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.5372549, 0.5372549, 0.5372549, 0)
+
+[node name="Label" type="Label" parent="." unique_id=51749883]
+material = SubResource("CanvasItemMaterial_o4o8p")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.409
+anchor_top = 0.448
+anchor_right = 0.71300006
+anchor_bottom = 0.59900004
+offset_left = -0.16799927
+offset_top = -0.3040161
+offset_right = -0.37609863
+offset_bottom = -0.15203857
+theme_override_fonts/font = ExtResource("2_5034k")
+theme_override_font_sizes/font_size = 56
