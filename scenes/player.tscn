@@ -114,6 +114,14 @@ z_index = 5
 collision_layer = 2
 script = ExtResource("1_g2els")
 
+[node name="DebugLabel" type="Label" parent="." unique_id=991270761]
+unique_name_in_owner = true
+visible = false
+offset_left = 1.0
+offset_top = 4.0
+offset_right = 41.0
+offset_bottom = 27.0
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1498145934]
 position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_8321d")
@@ -121,3 +129,10 @@ shape = SubResource("CapsuleShape2D_8321d")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2087627350]
 sprite_frames = SubResource("SpriteFrames_6c2xl")
 animation = &"rewind"
+
+[node name="Timer" type="Timer" parent="." unique_id=877400347]
+unique_name_in_owner = true
+process_callback = 0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

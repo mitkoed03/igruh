@@ -15,7 +15,7 @@ var previous_text = ""
 func _ready() -> void:
 	dialogue_label.started_typing.connect(on_started_typing)
 	dialogue_label.finished_typing.connect(on_finished_typing)
-	
+	1
 func on_started_typing() -> void:
 	history_label.text += previous_text
 	
