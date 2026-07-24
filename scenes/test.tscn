@@ -699,12 +699,12 @@ animations = [{
 
 [node name="Player" parent="." unique_id=629483466 instance=ExtResource("1_bl13t")]
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1363817132]
+zoom = Vector2(4, 4)
+
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1960560401]
 tile_map_data = PackedByteArray(0, 0, 255, 255, 1, 0, 0, 0, 5, 0, 7, 0, 0, 0, 0, 0, 1, 0, 0, 0, 5, 0, 7, 0, 0, 0, 2, 0, 1, 0, 0, 0, 5, 0, 7, 0, 0, 0, 1, 0, 1, 0, 0, 0, 5, 0, 7, 0, 0, 0, 254, 255, 1, 0, 0, 0, 5, 0, 7, 0, 0, 0)
 tile_set = SubResource("TileSet_6c2xl")
-
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1363817132]
-zoom = Vector2(4, 4)
 
 [node name="Killzone" parent="." unique_id=1920654986 instance=ExtResource("3_74lek")]
 position = Vector2(-245, 7)

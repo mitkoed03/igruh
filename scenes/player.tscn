@@ -19,6 +19,8 @@
 [ext_resource type="Texture2D" uid="uid://cg077ndo825wb" path="res://assets/player/player_fall_0.png" id="10_31cv2"]
 [ext_resource type="Texture2D" uid="uid://dnm8tbbwhh5ll" path="res://assets/player/player_run_7.png" id="10_qfm1y"]
 [ext_resource type="Texture2D" uid="uid://bi8a34drpp0s2" path="res://assets/player/player_fall_1.png" id="11_pf23h"]
+[ext_resource type="Texture2D" uid="uid://bmsgytq8hw3fd" path="res://assets/player/unused/player_damaged_0.png" id="12_i4ail"]
+[ext_resource type="Texture2D" uid="uid://dcph50txsnn0u" path="res://assets/player/unused/player_damaged_1.png" id="13_a38lo"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8321d"]
 radius = 6.0
@@ -68,6 +70,17 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("12_i4ail")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_a38lo")
+}],
+"loop": 1,
+"name": &"rewind",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_y4r1p")
 }, {
 "duration": 1.0,
@@ -107,4 +120,4 @@ shape = SubResource("CapsuleShape2D_8321d")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2087627350]
 sprite_frames = SubResource("SpriteFrames_6c2xl")
-animation = &"idle"
+animation = &"rewind"

@@ -1,13 +1,46 @@
 extends CharacterBody2D
 
-
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
 
+var rewind_duration: float = 2.0
+var rewinding: bool = false
+var rewind_values = {
+	"pos": [],
+	"vel": []
+}
+
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
+func rewind(delta: float) -> void:
+	var pos = rewind_values["pos"].pop_back()
+	
+	if rewind_values["pos"].is_empty():
+		rewinding = false
+		velocity = rewind_values["vel"][0]
+		return
+	
+	position = pos
+	rewind_values["pos"].pop_back()
+
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("rewind") and not rewinding:
+		rewinding = true
+		print("veler")
 
 func _physics_process(delta: float) -> void:
+	if rewinding:
+		animated_sprite_2d.play("rewind")
+		rewind(delta)
+		return
+	else:
+		rewind_values["pos"].append(position)
+		rewind_values["vel"].append(velocity)
+		
+		if rewind_duration * Engine.physics_ticks_per_second == rewind_values["pos"].size():
+			rewind_values["pos"].pop_front()
+			rewind_values["pos"].pop_front()
+	
 	# Add the gravity.
 	if not is_on_floor():
 		velocity += get_gravity() * delta
